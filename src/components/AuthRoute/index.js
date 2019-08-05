@@ -11,10 +11,10 @@ export default(WrapperComponent)=>{
     }
 
     render() {
-      // let {token} = this.state.user;
-      // if(!token){
-      //   return <Redirect to="/login"/>
-      // }
+      let {token} = this.state.user;
+      if(!token){
+        return <Redirect to="/login"/>
+      }
       return <WrapperComponent {...this.props}/>
     }
   }
